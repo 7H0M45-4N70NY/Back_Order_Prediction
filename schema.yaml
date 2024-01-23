@@ -1,1 +1,29 @@
-key : value
+COLUMNS:
+  sku: object
+  natioanl_inv: float64
+  lead_time: float64
+  in_transit_qty: float64
+  forecat_3_month: float64
+  forecast_6_month: float64
+  forecast_9_month: float64
+  sales_1_month: float64
+  sales_3_month: float64
+  sales_6_month: float64
+  min_bank: float64
+  potential_issue: object
+  pieces_past_due: float
+  perf_6_month_avg: float64
+  perf_12_month_avg: float64
+  local_bo_qty: float64
+  oe_constraint: object
+  deck_risk: object
+  ppap_risk: object
+  stop_auto_buy: object
+  rev_stop: object
+  went_on_backorder: object
+
+TARGET_COLUMNS:
+  name: went_on_backorder
+
+
+

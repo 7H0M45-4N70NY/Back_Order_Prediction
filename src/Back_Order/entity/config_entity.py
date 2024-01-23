@@ -6,3 +6,11 @@ class DataIngestionConfig:
     root_dir: Path
     source_path : str
     local_file_dir : Path
+    
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    target : Path
+    result: str
+    all_schema:dict
+    

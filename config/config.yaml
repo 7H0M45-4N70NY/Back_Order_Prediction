@@ -5,3 +5,8 @@ data_ingestion:
   source_path: Experiments\Kaggle_Training_Dataset_v2.csv
   #local_data_file: artifacts/data_ingestion/data.zip
   local_file_dir: artifacts/data_ingestion/data.csv
+
+data_validation:
+  root_dir: artifacts/data_validation
+  target: artifacts/data_ingestion/data.csv
+  result: artifacts/data_validation/result.txt
