@@ -1,7 +1,12 @@
+Kaggle_Test_Dataset_v2.csv
+Kaggle_Training_Dataset_v2.csv
+dataset.rar
+
+
+
 env
 .env
 artifacts
-experiments
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,16 @@
+Data fields
+
+sku - sku code
+national_inv - Current inventory level of component
+lead_time - Transit time
+in_transit_qtry - Quantity in transit
+forecast_x_month - Forecast sales for the net 3, 6, 9 months
+sales_x_month - Sales quantity for the prior 1, 3, 6, 9 months
+min_bank - Minimum recommended amount in stock
+potential_issue - Indictor variable noting potential issue with item
+pieces_past_due - Parts overdue from source
+perf_x_months_avg - Source performance in the last 6 and 12 months
+local_bo_qty - Amount of stock orders overdue
+X17-X22 - General Risk Flags
+went_on_back_order - Product went on backorder
+Validation - indicator variable for training (0), validation (1), and test set (2)
