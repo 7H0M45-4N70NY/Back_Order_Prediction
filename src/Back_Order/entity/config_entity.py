@@ -13,4 +13,10 @@ class DataValidationConfig:
     target : Path
     result: str
     all_schema:dict
+@dataclass(frozen=True)  
+class DataTransfomrationConfig:
+    root_dir: Path
+    data_path: Path
+    
+
     

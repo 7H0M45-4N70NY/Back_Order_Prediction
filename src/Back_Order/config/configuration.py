@@ -1,5 +1,5 @@
 from Back_Order.constants import *
-from Back_Order.entity.config_entity import DataIngestionConfig,DataValidationConfig
+from Back_Order.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransfomrationConfig
 from Back_Order.utils.common import read_yaml,create_directories
 
 class ConfigurationManager:
@@ -35,5 +35,14 @@ class ConfigurationManager:
             result=config.result
         )
         return data_validation_config
+    def get_data_transfomration_config(self)->DataTransfomrationConfig:
+        config=self.config.data_transformation
+        create_directories([config.root_dir])
+        data_transformation_config=DataTransfomrationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path
+        )
+        return data_transformation_config
+        
     
 

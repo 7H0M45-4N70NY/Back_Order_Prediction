@@ -10,3 +10,11 @@ data_validation:
   root_dir: artifacts/data_validation
   target: artifacts/data_ingestion/data.csv
   result: artifacts/data_validation/result.txt
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/data.csv
+  
+  
+  
+

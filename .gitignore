@@ -6,7 +6,9 @@ dataset.rar
 
 env
 .env
-artifacts
+data.csv
+train.csv
+test.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
