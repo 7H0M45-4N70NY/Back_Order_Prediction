@@ -1,5 +1,8 @@
 from Back_Order.constants import *
-from Back_Order.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransfomrationConfig
+from Back_Order.entity.config_entity import (DataIngestionConfig,
+                                             DataValidationConfig,
+                                             DataTransfomrationConfig,
+                                             ModelTrainingConfig)
 from Back_Order.utils.common import read_yaml,create_directories
 
 class ConfigurationManager:
@@ -44,5 +47,24 @@ class ConfigurationManager:
         )
         return data_transformation_config
         
+    def get_model_training_config(self)->ModelTrainingConfig:
+        config=self.config.model_training
+        target=self.schema.TARGET_COLUMNS
+        params=self.params.RandomForestClassifier
+        create_directories([config.root_dir])
+        model_training_config=ModelTrainingConfig(
+            root_dir=config.root_dir,
+            train_data_path=config.train_data_path,
+            test_data_path=config.test_data_path,
+            model_name=config.model_name,
+            target_column=target.name,
+            n_estimators=params.n_estimators,
+            min_samples_split=params.min_samples_split,
+            min_samples_leaf=params.min_samples_leaf,
+            max_depth=params.max_depth,
+            criterion=params.criterion,
+            ccp_alpha=params.ccp_alpha
+        )
+        return model_training_config
     
 

@@ -1,1 +1,10 @@
-key : value
+RandomForestClassifier:
+  n_estimators: 100
+  min_samples_split: 2
+  min_samples_leaf: 1
+  max_samples: 6000
+  max_depth: 30
+  criterion: gini
+  ccp_alpha: 0.01
+  
+  
