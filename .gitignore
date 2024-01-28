@@ -3,6 +3,8 @@ Kaggle_Training_Dataset_v2.csv
 dataset.rar
 
 
+model.joblib
+model.pkl
 
 env
 .env
