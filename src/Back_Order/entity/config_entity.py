@@ -31,6 +31,13 @@ class ModelTrainingConfig:
     max_samples:float
     max_depth:float
     criterion:str
-    ccp_alpha:float    
+    ccp_alpha:float
+@dataclass(frozen=True)
+class ModelEValuationConfig:
+    root_dir:Path
+    test_data_path:Path
+    model_path: Path
+    metric_file_name:Path
+    target_column:str 
 
     

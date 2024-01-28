@@ -2,7 +2,8 @@ from Back_Order.constants import *
 from Back_Order.entity.config_entity import (DataIngestionConfig,
                                              DataValidationConfig,
                                              DataTransfomrationConfig,
-                                             ModelTrainingConfig)
+                                             ModelTrainingConfig,
+                                             ModelEValuationConfig)
 from Back_Order.utils.common import read_yaml,create_directories
 
 class ConfigurationManager:
@@ -62,9 +63,21 @@ class ConfigurationManager:
             min_samples_split=params.min_samples_split,
             min_samples_leaf=params.min_samples_leaf,
             max_depth=params.max_depth,
+            max_samples=params.max_samples,
             criterion=params.criterion,
             ccp_alpha=params.ccp_alpha
         )
         return model_training_config
-    
+    def get_model_evaluation_config(self)->ModelEValuationConfig:
+        config=self.config.model_evaluation
+        target=self.schema.TARGET_COLUMNS
+        create_directories([config.root_dir])
+        model_evaluation_config=ModelEValuationConfig(
+            root_dir=config.root_dir,
+            test_data_path=config.test_data_path,
+            model_path=config.model_path,
+            metric_file_name=config.metric_file_name,
+            target_column=target.name
+        )   
+        return model_evaluation_config 
 

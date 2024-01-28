@@ -1,0 +1,15 @@
+artifact_uri: file:///G:/LILTHOMA/Rise_Wpu/Personal_Projects/Back_Order_Prediction/mlruns/0/0cc3b391ca7e4c41b6a34a55b43ec96b/artifacts
+end_time: 1706441457183
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0cc3b391ca7e4c41b6a34a55b43ec96b
+run_name: persistent-cod-110
+run_uuid: 0cc3b391ca7e4c41b6a34a55b43ec96b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706441450752
+status: 4
+tags: []
+user_id: thoma
