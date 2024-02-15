@@ -1,0 +1,95 @@
+<html>
+<body>
+<form action="{{url_for('predict')}}" method="POST">
+    <div class="form-row">
+        <label for='national_inv'> National_Inv:</label>
+        <input type="text" name='national_inv' id='national_inv' class="input-text" placeholder='national_inv' required>
+    </div>
+
+    <div class="form-row">
+        <label for="lead_time"> Lead Time:</label>
+        <input type="text" name="lead_time" id="lead_time" class="input-text" placeholder="lead_time" required>
+    </div>
+
+    <div class="form-row">
+        <label for="in_transit_qty"> In Transit Qty:</label>
+        <input type="text" name="in_transit_qty" id="in_transit_qty" class="input-text" placeholder="in_transit_qty" required>
+    </div>
+    
+    <div class="form-row">
+        <label for="forecast_3_month">  Forecast 3 Month:</label>
+        <input type="text" name="forecast_3_month" id="forecast_3_month" class="input-text" placeholder="forecast_3_month" required>
+    </div>
+  
+    <div class="form-row">
+        <label for="sales_1_month"> sales_1_month:</label>
+        <input type="text" name="sales_1_month" id="sales_1_month" class="input-text" placeholder="sales_1_month" required>
+    </div>
+  
+    <div class="form-row">
+        <label for="min_bank"> min_bank :</label>
+        <input type="text" name="min_bank" id="min_bank" class="input-text" placeholder="min_bank" required>
+    </div>   
+    <div class="form-row">
+        <label for="pieces_past_due">  pieces_past_due:</label>
+        <input type="text" name="pieces_past_due" id="pieces_past_due" class="input-text" placeholder="pieces_past_due" required>
+    </div>    
+    <div class="form-row">
+        <label for="local_bo_qty"> local_bo_qty:</label>
+        <input type="text" name="local_bo_qty" id="local_bo_qty" class="input-text" placeholder="local_bo_qty" required>
+    </div>
+    <div class="form-row">
+        <label for="perf_6_month_avg"> perf_6_month_avg:</label>
+        <input type="text" name="perf_6_month_avg" id="perf_6_month_avg" class="input-text" placeholder="perf_6_month_avg" required>
+    </div>
+
+    <div class="form-row">
+        <label for="potential_issue"> potential_issue:</label>
+        <select id ="potential_issue" name="potential_issue">
+            <option value="Yes">YES</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="deck_risk"> deck_risk:</label>
+        <select id ="deck_risk" name="deck_risk">
+            <option value="Yes">YES</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="oe_constraint"> oe_constraint:</label>
+        <select id ="oe_constraint" name="oe_constraint">
+            <option value="Yes">YES</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="ppap_risk"> ppap_risk:</label>
+        <select id ="ppap_risk" name="ppap_risk">
+            <option value="Yes">YES</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="stop_auto_buy"> stop_auto_buy:</label>
+        <select id ="stop_auto_buy" name="stop_auto_buy">
+            <option value="Yes">YES</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="rev_stop"> rev_stop:</label>
+        <select id ="rev_stop" name="rev_stop">
+            <option value="Yes">YES</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+    <div style="clear:both;"></div>
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>

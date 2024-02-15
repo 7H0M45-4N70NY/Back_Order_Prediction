@@ -117,6 +117,34 @@ class DataTransfomration:
         new_df=preprocessor.fit_transform(df)
         return pd.DataFrame(new_df,columns=df.columns)
     
+    
+    def run_transformation_predict(self,df):
+        cat_cols=['potential_issue', 'deck_risk', 'oe_constraint', 'ppap_risk', 'stop_auto_buy', 'rev_stop']
+        num_cols=['national_inv', 'lead_time', 'in_transit_qty', 'forecast_3_month', 'sales_1_month', 'min_bank', 'pieces_past_due', 'perf_6_month_avg', 'local_bo_qty']
+        num_pipeline=Pipeline(
+            steps=[
+                ('imputer',SimpleImputer(strategy="median")),
+                ('scaler',StandardScaler())
+            ])
+        potential_issue=['No', 'Yes']
+        deck_risk=['No', 'Yes']
+        oe_constraint=['No', 'Yes']
+        ppap_risk=['No', 'Yes']
+        stop_auto_buy=['Yes', 'No']
+        rev_stop= ['No', 'Yes']
+        cat_pipeline = Pipeline(
+            steps=[
+                ('imputer', SimpleImputer(strategy="most_frequent")),
+                ('labelencoder',OrdinalEncoder(categories=[potential_issue,deck_risk,oe_constraint,ppap_risk,stop_auto_buy,rev_stop]))
+            ]
+        )
+        preprocessor=ColumnTransformer([
+            ('num_pipeline',num_pipeline,num_cols),
+            ('cat_pipeline',cat_pipeline,cat_cols)
+        ])
+        new_df=preprocessor.fit_transform(df)
+        return pd.DataFrame(new_df,columns=df.columns)
+    
         
         
                 
