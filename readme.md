@@ -1,7 +1,13 @@
-# End-to-end-ML-Project
+# Back Order Prediction
+
+This git hub covers the creation of a Back_Order Prediction application for the given data I have used RandomForestCLassififer as the seelcted alorithm for this project I have tried experimenting with different and come into making the decision to use RandomForest
+
+Data Versioning : DVC have been used for versioning data
+Model Versioning : MLFLow have been used to keep track of the models and its character stics
+Source Code Versioning :Git HUb
 
 
-## Workflows
+## Workflows of the project 
 
 1. update config.yaml
 2. update schema.yaml
