@@ -1,41 +1,60 @@
-# Back Order Prediction
+# Back Order Prediction System
 
-This git hub covers the creation of a Back_Order Prediction application for the given data I have used RandomForestCLassififer as the seelcted alorithm for this project I have tried experimenting with different and come into making the decision to use RandomForest
+## Overview
 
-Data Versioning : DVC have been used for versioning data
-Model Versioning : MLFLow have been used to keep track of the models and its character stics
-Source Code Versioning :Git HUb
+The Back Order Prediction System is a machine learning-powered solution designed to predict potential backorders, enhancing inventory management, product merchandising, and customer satisfaction. This project was developed as part of an internship opportunity, with the support of the Neural Platform.
+
+## Key Features
+
+- **Model Training Module:**
+  - Utilizes machine learning models for backorder prediction.
+  - Sub-components include Data Preprocessing, Feature Selection, Model Training, and Model Evaluation.
+
+- **Data and Model Versioning Module:**
+  - Implements DVC (Data Version Control) for tracking data versions.
+  - Utilizes MLflow for logging models, evaluation metrics, and parameters.
+
+- **Event Logging Module:**
+  - Logs every event within the system for debugging and monitoring.
+  - Sub-components include Custom Exception Handling, Logging Methods, and Non-blocking Logging.
+
+## Technologies Used
+
+- Python
+- Flask
+- MLflow
+- DVC
+- HTML
+
+## Project Structure
+
+- `model_training/`: Contains scripts for model training and evaluation.
+- `data_versioning/`: Manages data versions using DVC.
+- `event_logging/`: Handles event logging and error handling.
+- `web_interface/`: Implements the user interface using HTML and Flask.
+
+## How to Run
+
+1. Clone the repository: `git clone https://github.com/your-username/back-order-prediction.git`
+2. Navigate to the project directory: `cd back-order-prediction`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run the application: `python web_interface/app.py`
+
+## Performance Metrics
+
+- Accuracy: Approximately 91.25%
+- F1 Score: 0.10
+- Precision: 5.41%
+- Recall: 72.47%
+
+## Future Enhancements
+
+- Explore advanced machine learning models.
+- Implement real-time data ingestion for up-to-date predictions.
+- Enhance the user interface for a better user experience.
 
 
-## Workflows of the project 
 
-1. update config.yaml
-2. update schema.yaml
-3. update params.yaml
-4. update the entity 
-5. update the configuration manager in src config
-6. update the components
-7. update the pipeline
-8. update the main.py
-9. update the app.py
+## License
 
-# How to run?
-### STEPS:
-
-
-```bash
-conda create -n mlproj python=3.8 -y 
-```
-
-```bash
-conda activate mlproj
-```
-
-
-```bash
-pip install -r requirements.txt
-```
-
-
-
-
+This project is licensed under the [MIT License](LICENSE).
